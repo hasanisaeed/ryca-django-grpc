@@ -3,7 +3,7 @@ from setuptools import setup
 
 HERE = pathlib.Path(__file__).parent
 
-README = (HERE / "ryca_django_grpc/README.md").read_text()
+README = (HERE / "README.md").read_text()
 
 setup(
     name="ryca_django_grpc",
