@@ -1,6 +1,6 @@
-# import jwt
-#
-# from quickstart.settings import JWT_SECRET
+import jwt
+
+JWT_SECRET = "TOKEN"
 
 SAFE_METHODS = ('GET', 'HEAD', 'OPTIONS')
 ACCESS_TOKEN_ERROR_MSG = 'Invalid access_token'
@@ -129,13 +129,13 @@ class IsAuthenticated(BasePermission):
         return not access_token
 
     def has_jwt_error(self, access_token):
-        # if JWT_SECRET:
-        #     try:
-        #         jwt.decode(access_token,
-        #                    key=JWT_SECRET,
-        #                    algorithms=["HS256"]).get('user_info')
-        #     except jwt.DecodeError:
-        #         return True, SESSION_TOKEN_ERROR_MSG
-        #     except jwt.ExpiredSignatureError:
-        #         return True, SESSION_TOKEN_EXPIRED_MSG
+        if JWT_SECRET:
+            try:
+                jwt.decode(access_token,
+                           key=JWT_SECRET,
+                           algorithms=["HS256"]).get('user_info')
+            except jwt.DecodeError:
+                return True, SESSION_TOKEN_ERROR_MSG
+            except jwt.ExpiredSignatureError:
+                return True, SESSION_TOKEN_EXPIRED_MSG
         return False, None
