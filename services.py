@@ -3,7 +3,8 @@ from functools import update_wrapper
 import grpc
 from django.db.models.query import QuerySet
 from rest_framework.settings import api_settings
-from ryca_django_grpc.signals import grpc_request_started, grpc_request_finished
+
+from signals import grpc_request_started, grpc_request_finished
 
 
 class Service:
