@@ -4,7 +4,7 @@ import grpc
 from django.db.models.query import QuerySet
 from rest_framework.settings import api_settings
 
-from signals import grpc_request_started, grpc_request_finished
+from ryca_django_grpc.signals import grpc_request_started, grpc_request_finished
 
 
 class Service:
