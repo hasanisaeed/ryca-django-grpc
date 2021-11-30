@@ -2,8 +2,8 @@ from functools import update_wrapper
 
 import grpc
 from django.db.models.query import QuerySet
-
-from django_grpc_framework.signals import grpc_request_started, grpc_request_finished
+from rest_framework.settings import api_settings
+from ryca_django_grpc.signals import grpc_request_started, grpc_request_finished
 
 
 class Service:
@@ -17,7 +17,6 @@ class Service:
     def as_servicer(cls, **initkwargs):
         """
         Returns a gRPC servicer instance::
-
             servicer = PostService.as_servicer()
             add_PostControllerServicer_to_server(servicer, server)
         """

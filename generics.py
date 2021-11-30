@@ -4,8 +4,8 @@ from django.core.exceptions import ValidationError
 from django.http import Http404
 import grpc
 
-from django_grpc_framework.utils import model_meta
-from django_grpc_framework import mixins, services
+from ryca_django_grpc.utils import model_meta
+from ryca_django_grpc import mixins, services
 
 
 class GenericService(services.Service):

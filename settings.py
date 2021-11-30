@@ -69,7 +69,7 @@ class GRPCSettings:
     A settings object that allows gRPC Framework settings to be accessed as
     properties. For example:
 
-        from django_grpc_framework.settings import grpc_settings
+        from ryca_django_grpc.settings import grpc_settings
         print(grpc_settings.ROOT_HANDLERS_HOOK)
 
     Any setting with string import paths will be automatically resolved
