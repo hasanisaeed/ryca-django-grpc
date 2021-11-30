@@ -2,3 +2,5 @@
  *.pyc
  **/__pycache__
 .venv
+ryca_django_grpc.egg-info
+dist
