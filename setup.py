@@ -3,14 +3,14 @@ from setuptools import setup
 
 HERE = pathlib.Path(__file__).parent
 
-README = (HERE / "README.md").read_text()
+README = (HERE / "README.rst").read_text()
 
 setup(
     name="ryca_django_grpc",
-    version="1.0.12",
+    version="1.0.13",
     description="Django gRPC framework",
     long_description=README,
-    long_description_content_type="text/markdown",
+    long_description_content_type="text/x-rst",
     url="https://github.com/realsaeedhassani/ryca-django-grpc",
     author="Saeed Hasani Borzadaran",
     author_email="hassanisaeed19@gmail.com",
