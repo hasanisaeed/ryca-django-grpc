@@ -5,9 +5,6 @@
 .. image:: https://readthedocs.org/projects/ryca_django_grpc/badge/?version=latest
    :target: https://readthedocs.org/projects/ryca_django_grpc/badge/?version=latest
 
-.. image:: https://travis-ci.org/fengsp/ryca_django_grpc.svg?branch=master
-   :target: https://travis-ci.org/fengsp/django-grpc-framework.svg?branch=master
-
 .. image:: https://img.shields.io/pypi/pyversions/ryca_django_grpc
    :target: https://img.shields.io/pypi/pyversions/ryca_django_grpc
 
