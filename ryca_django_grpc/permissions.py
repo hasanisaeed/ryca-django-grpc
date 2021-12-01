@@ -1,6 +1,5 @@
 import jwt
-
-JWT_SECRET = "TOKEN"
+from rest_framework.settings import api_settings
 
 SAFE_METHODS = ('GET', 'HEAD', 'OPTIONS')
 ACCESS_TOKEN_ERROR_MSG = 'Invalid access_token'
@@ -129,10 +128,11 @@ class IsAuthenticated(BasePermission):
         return not access_token
 
     def has_jwt_error(self, access_token):
-        if JWT_SECRET:
+        token = api_settings.JWT_TOKEN
+        if token:
             try:
                 jwt.decode(access_token,
-                           key=JWT_SECRET,
+                           key=token,
                            algorithms=["HS256"]).get('user_info')
             except jwt.DecodeError:
                 return True, SESSION_TOKEN_ERROR_MSG

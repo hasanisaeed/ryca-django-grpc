@@ -7,7 +7,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="ryca_django_grpc",
-    version="1.0.10",
+    version="1.0.12",
     description="Django gRPC framework",
     long_description=README,
     long_description_content_type="text/markdown",
